@@ -1,4 +1,12 @@
 from django.contrib import admin
-from .models import Category
+from .models import Category, Question
 # Register your models here.
-admin.site.register(Category)
+
+class QuestionInline(admin.StackedInline):
+    model = Question
+    extra = 1
+
+class CategoryAdmin(admin.ModelAdmin):
+    inlines = [QuestionInline]
+
+admin.site.register(Category, CategoryAdmin)
