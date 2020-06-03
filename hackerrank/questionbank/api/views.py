@@ -1,11 +1,11 @@
 from rest_framework.generics import ListAPIView,RetrieveAPIView
 from questionbank.models import Category,Question
 
-from .serializers import CategorySerializer, CategoryDetailSerializer, QuestionDetailSerializer
+from .serializers import CategoryDetailSerializer, QuestionDetailSerializer
 
 class CategoryListAPIView(ListAPIView):
     queryset = Category.objects.all()
-    serializer_class = CategorySerializer
+    serializer_class = CategoryDetailSerializer
 
 class CategoryDetailAPIView(RetrieveAPIView):
     queryset = Category.objects.all()

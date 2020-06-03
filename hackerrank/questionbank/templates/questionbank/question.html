@@ -58,9 +58,8 @@
           <div class="col">
 
             <ul class="list-group scrollable">
-            {% for question in category.question_set.all %}
-    
-              <li class="list-group-item"><a class= "list-link" href="{{question.question_link}}">{{question.id}}. {{question.question_text}}</a></li>
+            {% for question in category.questions.all %}
+              <li class="list-group-item"><a class= "list-link" href="{{question.question_link}}">{{forloop.counter}}. {{question.question_text}}</a></li>
             {% endfor %}
             </ul>
 

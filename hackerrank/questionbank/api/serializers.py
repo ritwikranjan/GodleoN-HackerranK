@@ -9,13 +9,6 @@ class QuestionSerializer(serializers.HyperlinkedModelSerializer):
             'question_link'
         )
 
-class CategorySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Category
-        fields = (
-            'category_name',
-            )
-
 class CategoryDetailSerializer(serializers.HyperlinkedModelSerializer):
     questions = serializers.HyperlinkedRelatedField(
         many = True,
