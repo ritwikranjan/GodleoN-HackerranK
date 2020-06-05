@@ -9,7 +9,7 @@ class QuestionSerializer(serializers.ModelSerializer):
             'question_link'
         )
 
-class CategoryDetailSerializer(serializers.ModelSerializer):
+class CategoryDetailSerializer(serializers.HyperlinkedModelSerializer):
     questions = serializers.ModelField(
         many = True,
         read_only = True,
@@ -24,7 +24,7 @@ class CategoryDetailSerializer(serializers.ModelSerializer):
         )
 
 
-class QuestionDetailSerializer(serializers.ModelSerializer):
+class QuestionDetailSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Question
         fields = (
