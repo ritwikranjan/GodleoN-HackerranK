@@ -1,1 +1,1 @@
-web: gunicorn hackerrank.wsgi --log-file -
+'web: gunicorn hackerrank.wsgi --log-file -' 
