@@ -7,9 +7,6 @@ class CategoryListAPIView(ListAPIView):
     queryset = Category.objects.all()
     serializer_class = CategoryDetailSerializer
 
-class CategoryDetailAPIView(RetrieveAPIView):
-    queryset = Category.objects.all()
-    serializer_class = CategoryDetailSerializer
 
 class QuestionDetailAPIView(RetrieveAPIView):
     queryset = Question.objects.all()
