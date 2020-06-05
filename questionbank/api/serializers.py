@@ -5,6 +5,7 @@ class QuestionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Question
         fields =(
+            'category'
             'question_text',
             'question_link'
         )
