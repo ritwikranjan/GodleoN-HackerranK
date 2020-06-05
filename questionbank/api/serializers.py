@@ -5,6 +5,7 @@ class QuestionSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Question
         fields =(
+            'category'
             'question_text',
             'question_link'
         )
