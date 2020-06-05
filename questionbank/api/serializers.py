@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from questionbank.models import Category,Question
 
-class QuestionSerializer(serializers.ModelSerializer):
+class QuestionSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Question
         fields =(
@@ -10,7 +10,7 @@ class QuestionSerializer(serializers.ModelSerializer):
         )
 
 class CategoryDetailSerializer(serializers.HyperlinkedModelSerializer):
-    questions = serializers.ModelField(
+    questions = serializers.HyperlinkedRelatedField(
         many = True,
         read_only = True,
         view_name = 'question-detail'
