@@ -25,7 +25,9 @@ SECRET_KEY = 'z_(*e429!qw=d@-t=lo!$6xz!5t6b&dfx0xyvu8$=+_o1s^kg^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'ritwikranjan.co'
+]
 
 
 # Application definition

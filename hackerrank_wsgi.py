@@ -1,0 +1,1 @@
+from hackerrank.wsgi import application
